@@ -16,7 +16,6 @@ namespace RegexExpansionMetabot
             {
                 Match match = Regex.Match(word, pattern, RegexOptions.IgnoreCase);
                 str = match.Value;
-
             }
             catch (Exception e)
             {
