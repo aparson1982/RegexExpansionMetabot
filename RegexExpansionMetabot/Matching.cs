@@ -16,14 +16,7 @@ namespace RegexExpansionMetabot
             try
             {
                 bool match = Regex.IsMatch(inputString, pattern, RegexOptions.IgnoreCase);
-                if (match == true)
-                {
-                    str = "True";
-                }
-                else
-                {
-                    str = "False";
-                }
+                str = match == true ? "True" : "False";
             }
             catch (Exception e)
             {
