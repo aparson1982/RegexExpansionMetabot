@@ -119,5 +119,33 @@ namespace RegexExpansionMetabot
             }
             return str;
         }
+
+
+        public static string SortNumerical(string numberList, char delimiter, bool isAscending = true )
+        {
+            string str = string.Empty;
+            try
+            {
+                List<double> numericalList = numberList.Trim().Split(delimiter).Select(x => double.Parse(x)).ToList();
+
+                if (isAscending == true)
+                {
+                    numericalList.Sort();
+                }
+                else
+                {
+                    numericalList = numericalList.OrderByDescending(x => x).ToList();
+                }
+                str = string.Join(delimiter.ToString(), numericalList);
+            }
+            catch (Exception e)
+            {
+                str = "Message:  " + e.Message + Environment.NewLine +
+                    "Source:  " + e.Source + Environment.NewLine +
+                    "StackTrace:  " + e.StackTrace + Environment.NewLine +
+                    "Inner Exception:  " + e.InnerException + Environment.NewLine;
+            }
+            return str;
+        }
     }
 }

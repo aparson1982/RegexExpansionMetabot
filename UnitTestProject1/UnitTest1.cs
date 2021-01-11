@@ -45,9 +45,15 @@ namespace UnitTestProject1
         public void TestRemoveLastChar()
         {
             //Console.WriteLine(StringOperations.TrimLastCharacter("\"1\",\"2\","));
-            string textFileString = TextFileOperations.ConvertTextFileToString(@"C:\Users\rparso2\Downloads\GoogleDriveTest\OPDJ000321 (1) (1) - Copy.csv");
+            //string textFileString = TextFileOperations.ConvertTextFileToString(@"C:\Users\rparso2\Downloads\GoogleDriveTest\OPDJ000321 (1) (1) - Copy.csv");
             //Console.WriteLine(textFileString);
-            Console.WriteLine(StringOperations.RemoveEndingCharactersExt(textFileString,", ", true));
+            //Console.WriteLine(StringOperations.RemoveEndingCharactersExt(textFileString,", ", true));
+            //string literal = @"Ziem'S Carpet Workroom, Inc. \"" ";
+            //Console.WriteLine(StringOperations.ToLiteral(literal, "Csharp"));
+
+            Console.WriteLine(Sorting.SortNumerical("5.1, 1.01, 1.02, 5.11, 3, 8, 10, 11, 010, 12",',', true));
+
+            //Console.WriteLine(StringOperations.RemoveStartingCharactersExt(literal, "\""));
         }
     }
 }
